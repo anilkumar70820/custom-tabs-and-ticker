@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-const CustomTabs = () => {
+
+export const CustomTabs = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const handleTabClick = (Index) => {
@@ -9,18 +10,15 @@ const CustomTabs = () => {
   const tabData = [
     {
       label: "Tab 1",
-      h1: 'content for tab 1',
       content:
         "Content for Tab 1 Lorem ipsum, dolor sit amet consectetur adipisicing borum expedita architecto, quidem voluptatibus odio quas nemo, voluptas doloribus quaerat aperiam dignissimos elit. Consequatur laborum expedita architecto, quidem voluptatibus odio quas nemo, voluptas doloribus quaerat aperiam dignissimos sunt placeat, repellendus reprehenderit ex facilis maiores minus et ullam sapiente nisi. Illo nesciunt asperiores, excepturi assumenda corrupti ducimus repellendus suscipit repudiandae ea aliquid harum minima aspernatur eligendi!",
     },
     {
       label: "Tab 2",
-      h1: 'content for tab 2',
-      content: "Content for Tab 2 Lorem ipsum, dolor sit amet c! adipisicing elit. Consequatur laborum expedita architecto, quidem voluptatibus odio quas nemo, voluptas doloribus quaerat aperiam dignissimos sunt placeat, repellendus reprehenderit ex facilis maiores minus et ullam sapiente nisi. Illo nesciunt asperiores, excepturi assumenda corrupti ducimus repellendus suscipit repudiandae ea aliquid harum minima aspernatur eligendi  sunt placeat, repellendus reprehenderit ex facilis maiores minus et ullam sapiente nisi. Illo nesciunt asperiores, excepturi assumenda corrupti ducimus repellendus suscipit repudiandae ea aliquid harum",
+      content: "Content for Tab 2 Lorem ipsum, dolor sit amet c!",
     },
     {
       label: "Tab 3",
-      h1: 'content for tab 3',
       content:
         "isicing elit. Consequatur laonsectetur adipisicing elit. Consequatur laborum expedita architecto, quidem voluptatibus odio quas nemo, voluptas doloribus quaerat aperiam dignissimos sunt placeat, repellendus reprehenderit ex facilis maiores minus et ullam sapiente nisi. Illo nesciunt asperiores, excepturi assumenda corrupti ducimus repellendus suscipit repudiandae ea aliquid harum minima aspernatur eligendi  sunt placeat, repellendus reprehenderit ex facilis maiores minus et ullam sapiente nisi. Illo nesciunt asperiores, excepturi assumenda corrupti ducimus repellendus suscipit repudiandae ea aliquid harum minima aspernatur eligendi!",
     },
@@ -30,7 +28,6 @@ const CustomTabs = () => {
     <div>
       <div className="container">
         <div className="p-4 text-center content_height overflow-scroll">
-          <h1>{tabData[activeTab].h1}</h1>
           {tabData[activeTab].content}
         </div>
         <div className="d-flex justify-content-center my-5">
@@ -52,5 +49,3 @@ const CustomTabs = () => {
     </div>
   );
 };
-
-export default CustomTabs;

@@ -16,28 +16,28 @@ const CustomTab = () => {
   return (
     <div className="container">
       <div className="tab-content d-flex flex-column align-items-center">
-        {activeTab === "tab1" && <img className="img w-100" src={bigimg_3} alt="ImageOne" />}
-        {activeTab === "tab2" && <img className="img w-100" src={bigimg_1} alt="ImageOne" />}
-        {activeTab === "tab3" && <img className="img w-100" src={bigimg_2} alt="ImageOne" />}
+        {activeTab === "tab1" && <img className="img w-100 rounded-2" src={bigimg_3} alt="ImageOne" />}
+        {activeTab === "tab2" && <img className="img w-100 rounded-2" src={bigimg_1} alt="ImageOne" />}
+        {activeTab === "tab3" && <img className="img w-100 rounded-2" src={bigimg_2} alt="ImageOne" />}
       </div>
-      <div className="tab-buttons d-flex align-items-center justify-content-center flex-wrap my-5 gap-4 overflow-x-scroll">
+      <div className="tab-buttons d-flex justify-content-center my-5 gap-sm-4 gap-2">
         <button
           onClick={() => handleTabClick("tab1")}
-          className={`border-0 bg-transparent ${activeTab === "tab1" ? "active" : ""}`}
+          className={`border-0 bg-transparent p-0 ${activeTab === "tab1" ? "active img_shadow rounded-2 bg-transparent" : ""}`}
         >
-          <img src={ImageOne} alt="ImageOne" />
+          <img className="btns" src={ImageOne} alt="ImageOne" />
         </button>
         <button
           onClick={() => handleTabClick("tab2")}
-          className={`border-0 bg-transparent ${activeTab === "tab2" ? "active" : ""}`}
+          className={`border-0 bg-transparent p-0 ${activeTab === "tab2" ? "active img_shadow rounded-2 bg-transparent" : ""}`}
         >
-          <img src={ImageTwo} alt="ImageOne" />
+          <img className="btns" src={ImageTwo} alt="ImageOne" />
         </button>
         <button
           onClick={() => handleTabClick("tab3")}
-          className={`border-0 bg-transparent ${activeTab === "tab3" ? "active" : ""}`}
+          className={`border-0 bg-transparent p-0 ${activeTab === "tab3" ? "active img_shadow rounded-2 bg-transparent" : ""}`}
         >
-          <img src={ImageThree} alt="ImageOne" />
+          <img className="btns" src={ImageThree} alt="ImageOne" />
         </button>
       </div>
     </div>
